@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>替换节点——hkx</title>
+    <script>
+        function replaceP(){
+            let oOldP = document.getElementsByTagName("p")[0]
+            let oNewP = document.createElement("p")
+            let oText = document.createTextNode("我是hkx")
+            oNewP.appendChild(oText)//完整元素
+            oOldP.parentNode.replaceChild(oNewP,oOldP)
+            
+        }
+       function createP(){
+        // 创建节点
+        let oP = document.createElement("p")
+        // 事件对应的文本内容
+        let oText = document.createTextNode("我叫hkx")
+        oP.appendChild(oText)//完整元素
+        document.body.appendChild(oP)
+       }
+    </script>
+</head>
+<!-- 点击添加 -->
+<body onclick="replaceP()">
+<!-- <body onload="createP()"> -->
+    <p>每一个不曾起舞的日子都是对生命的辜负</p>
+</body>
+</html>
